@@ -1,0 +1,22 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// status ve gender string olarak tutuluyor çünkü SQLite native enum desteklemiyor
+// backend tarafında GraphQL enum ile tip güvenliği sağlanıyor
+model Character {
+  id          Int      @id @default(autoincrement())
+  image       String
+  name        String
+  status      String   // ALIVE, DEAD, UNKNOWN
+  gender      String   // MALE, FEMALE, UNKNOWN
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
