@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Tailwind v4'te dark mode class-based çalışması için custom variant lazım.
+   :where() specificity'yi sıfırda tuttuğu için override sorunları olmuyor */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-slate-900 text-gray-100;
+}
