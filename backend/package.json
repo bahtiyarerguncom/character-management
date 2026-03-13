@@ -1,8 +1,8 @@
 {
   "name": "backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Character Management GraphQL API",
+  "author": "Bahtiyar",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
