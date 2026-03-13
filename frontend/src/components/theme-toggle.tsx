@@ -30,7 +30,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="relative h-9 w-16 rounded-full bg-gray-200 transition-colors duration-300 dark:bg-slate-700"
+      className="relative h-9 w-16 shrink-0 overflow-hidden rounded-full bg-gray-200 transition-colors duration-300 dark:bg-slate-700"
       aria-label="Toggle dark mode"
     >
       <span
